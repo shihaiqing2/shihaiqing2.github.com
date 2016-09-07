@@ -1,0 +1,532 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/common.css">
+<script src="js/fontChange.js"></script>
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded',function(){
+        var oList=document.querySelector('.img_list');
+        var aContent=oList.children;
+        var oOl=document.querySelector('.btn_list');
+        var aHead=oOl.children;
+        oList.style.width=aContent[0].offsetWidth*aContent.length+'px';
+        var x=-aContent[0].offsetWidth;
+        var iNow=1;
+        var bReady=true;
+        x=-iNow*aContent[0].offsetWidth;
+        oList.style.transform='translate('+x+'px)';
+        //手指按下
+        oList.addEventListener('touchstart',function(ev){
+            if(!bReady) return;
+            bReady=false;
+            oList.style.transition='none';
+            var oldX=ev.targetTouches[0].clientX;
+            var disX=oldX-x;
+            //手指移动时函数
+            function fnMove(ev){
+                x=ev.targetTouches[0].clientX-disX;
+                oList.style.transform='translate('+x+'px)';
+            }
+
+            //手指抬起时函数
+            function fnEnd(ev){
+               oList.style.transition='1s all ease';
+                document.removeEventListener('touchmove',fnMove,false);
+                document.removeEventListener('touchend',fnEnd,false);
+                var newX=ev.changedTouches[0].clientX;
+                if(Math.abs(newX-oldX)>50){
+                    if(newX<oldX){
+                        iNow++;
+                        if(iNow==aContent.length){
+                            iNow=0;
+                        }
+                    }else{
+                        iNow--;
+                        if(iNow==-1){
+                            iNow=aContent.length-1;
+                        }
+                    }
+                }
+                //console.log(iNow);
+                x=-iNow*aContent[0].offsetWidth;
+                oList.style.transform='translate('+x+'px)';
+                //改变按钮状态
+                tab();
+            }
+            document.addEventListener('touchmove',fnMove,false);
+            document.addEventListener('touchend',fnEnd,false);
+            ev.preventDefault();
+        },false);
+        
+        //当过渡结束时
+        oList.addEventListener('transitionend',function(){
+            oList.style.transition='none';
+            if(iNow==aContent.length-1){
+                iNow=1;
+            }
+            if(iNow==0){
+                iNow=aContent.length-2;
+            }
+            x=-iNow*aContent[0].offsetWidth;
+            oList.style.transform='translate('+x+'px)';
+            bReady=true;
+        },false);
+
+        //按钮状态切换
+        function tab(){
+            for(var i=0;i<aHead.length;i++){
+                aHead[i].className='';
+                 if(iNow==aContent.length-1){
+                    iNow=1;
+                }
+                if(iNow==0){
+                    iNow=aContent.length-2;
+                }
+                aHead[iNow-1].classList.add('active');
+            }
+        }
+        //添加定时器
+        var timer=setInterval(tabAuto,2000);
+
+        //自动轮播
+        function tabAuto(){
+            oList.style.transition='1s ease all';
+            iNow++;
+            iNow%=aContent.length;
+            x=-iNow*aContent[0].offsetWidth;
+            oList.style.transform='translate('+x+'px)';
+            tab();
+        }
+    },false);
+
+</script>
+</head>
+
+<body>
+	<header>
+    	<a href="#" class="back"></a>
+        <h1 class="logo">聚划算</h1>
+    </header>
+    <div class="banner_box">
+        
+        <div class="banner">
+            <ul class="img_list clearfix">
+                <li><a href="javascript:;"><img src="img/b5.png" ></a></li>
+                <li><a href="javascript:;"><img src="img/b1.png" ></a></li>
+                <li><a href="javascript:;"><img src="img/b2.png" ></a></li>
+                <li><a href="javascript:;"><img src="img/b3.png" ></a></li>
+                <li><a href="javascript:;"><img src="img/b4.png" ></a></li>
+                <li><a href="javascript:;"><img src="img/b5.png" ></a></li>
+                <li><a href="javascript:;"><img src="img/b1.png" ></a></li>
+            </ul>
+            <ol class="clearfix btn_list">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+	
+    
+    <!--内容-->
+    <section class="main">
+    	<ul class="menu clearfix">
+        	<li>
+            	<a href="javascript:;">
+                	<span class="icon"></span>
+                    <p>商品</p>
+                </a>
+            </li>
+            <li>
+            	<a href="javascript:;">
+                	<span class="icon icon_02"></span>
+                    <p>生活</p>
+                </a>
+            </li>
+            <li>
+            	<a href="javascript:;">
+                	<span class="icon icon_03"></span>
+                    <p>品牌</p>
+                </a>
+            </li>
+            <li>
+            	<a href="javascript:;">
+                	<span class="icon icon_04"></span>
+                    <p>聚宝盆</p>
+                </a>
+            </li>
+            <li>
+            	<a href="javascript:;">
+                	<span class="icon icon_05"></span>
+                    <p>聚名品</p>
+                </a>
+            </li>
+            <li>
+            	<a href="javascript:;">
+                	<span class="icon icon_06"></span>
+                    <p>聚家装</p>
+                </a>
+            </li>
+            <li>
+            	<a href="javascript:;">
+                	<span class="icon icon_07"></span>
+                    <p>聚透</p>
+                </a>
+            </li>
+            <li>
+            	<a href="javascript:;">
+                	<span class="icon icon_08"></span>
+                    <p>客户端</p>
+                </a>
+            </li>
+            
+        </ul>
+        <!--排行榜-->
+        <div class="rank">
+        	<div class="rank_top clearfix">
+            	<h2 class="fl">聚划算热卖排行</h2>
+                <span class="fr">TOP10</span>
+            </div>
+            <ul class="rank_bottom">
+            	<li class="clearfix">
+                	<em class="fl">1</em>
+                    <a href="javascript:;" class="fl img_box"><img src="img/p1.png" /></a>
+                    <a href="javascript:;" class="fl detail_box">
+                    	<div class="fl">
+                        	<p class="sale">已售<span>68423</span></p>
+                            <div class="price clearfix">
+                            	<p class="fl discount"><span>2.3</span>折</p>
+                                <p class="fr money">￥<span>299</span></p>
+                            </div>
+                        </div>
+                        <p class="fr price2">￥51</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                
+                <li class="clearfix">
+                	<em class="fl">2</em>
+                    <a href="javascript:;" class="fl img_box"><img src="img/p2.png" /></a>
+                    <a href="javascript:;" class="fl detail_box">
+                    	<div class="fl">
+                        	<p class="sale">已售<span>68423</span></p>
+                            <div class="price clearfix">
+                            	<p class="fl discount"><span>2.3</span>折</p>
+                                <p class="fr money">￥<span>499</span></p>
+                            </div>
+                        </div>
+                        <p class="fr price2">￥289</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                <li class="clearfix">
+                	<em class="fl">3</em>
+                    <a href="javascript:;" class="fl img_box"><img src="img/p3.png" /></a>
+                    <a href="javascript:;" class="fl detail_box">
+                    	<div class="fl">
+                        	<p class="sale">已售<span>68423</span></p>
+                            <div class="price clearfix">
+                            	<p class="fl discount"><span>2.3</span>折</p>
+                                <p class="fr money">￥<span>299</span></p>
+                            </div>
+                        </div>
+                        <p class="fr price2">￥41</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                
+                <li class="clearfix">
+                	<em class="fl">4</em>
+                    <a href="javascript:;" class="fl img_box"><img src="img/p4.png" /></a>
+                    <a href="javascript:;" class="fl detail_box">
+                    	<div class="fl">
+                        	<p class="sale">已售<span>68423</span></p>
+                            <div class="price clearfix">
+                            	<p class="fl discount"><span>2.3</span>折</p>
+                                <p class="fr money">￥<span>299</span></p>
+                            </div>
+                        </div>
+                        <p class="fr price2">￥51</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                <li class="clearfix">
+                	<em class="fl">5</em>
+                    <a href="javascript:;" class="fl img_box"><img src="img/p5.png" /></a>
+                    <a href="javascript:;" class="fl detail_box">
+                    	<div class="fl">
+                        	<p class="sale">已售<span>68423</span></p>
+                            <div class="price clearfix">
+                            	<p class="fl discount"><span>2.3</span>折</p>
+                                <p class="fr money">￥<span>299</span></p>
+                            </div>
+                        </div>
+                        <p class="fr price2">￥71</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                
+                <li class="clearfix">
+                	<em class="fl">6</em>
+                    <a href="javascript:;" class="fl img_box"><img src="img/p6.png" /></a>
+                    <a href="javascript:;" class="fl detail_box">
+                    	<div class="fl">
+                        	<p class="sale">已售<span>68423</span></p>
+                            <div class="price clearfix">
+                            	<p class="fl discount"><span>2.3</span>折</p>
+                                <p class="fr money">￥<span>299</span></p>
+                            </div>
+                        </div>
+                        <p class="fr price2">￥88</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                <li class="clearfix">
+                	<em class="fl">7</em>
+                    <a href="javascript:;" class="fl img_box"><img src="img/p7.png" /></a>
+                    <a href="javascript:;" class="fl detail_box">
+                    	<div class="fl">
+                        	<p class="sale">已售<span>68423</span></p>
+                            <div class="price clearfix">
+                            	<p class="fl discount"><span>2.3</span>折</p>
+                                <p class="fr money">￥<span>299</span></p>
+                            </div>
+                        </div>
+                        <p class="fr price2">￥51</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                
+                <li class="clearfix">
+                	<em class="fl">8</em>
+                    <a href="javascript:;" class="fl img_box"><img src="img/p8.png" /></a>
+                    <a href="javascript:;" class="fl detail_box">
+                    	<div class="fl">
+                        	<p class="sale">已售<span>68423</span></p>
+                            <div class="price clearfix">
+                            	<p class="fl discount"><span>2.3</span>折</p>
+                                <p class="fr money">￥<span>299</span></p>
+                            </div>
+                        </div>
+                        <p class="fr price2">￥51</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                <li class="clearfix">
+                	<em class="fl">9</em>
+                    <a href="javascript:;" class="fl img_box"><img src="img/p9.png" /></a>
+                    <a href="javascript:;" class="fl detail_box">
+                    	<div class="fl">
+                        	<p class="sale">已售<span>68423</span></p>
+                            <div class="price clearfix">
+                            	<p class="fl discount"><span>2.3</span>折</p>
+                                <p class="fr money">￥<span>299</span></p>
+                            </div>
+                        </div>
+                        <p class="fr price2">￥71</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                
+                <li class="clearfix">
+                	<em class="fl">10</em>
+                    <a href="javascript:;" class="fl img_box"><img src="img/p10.png" /></a>
+                    <a href="javascript:;" class="fl detail_box">
+                    	<div class="fl">
+                        	<p class="sale">已售<span>68423</span></p>
+                            <div class="price clearfix">
+                            	<p class="fl discount"><span>2.3</span>折</p>
+                                <p class="fr money">￥<span>299</span></p>
+                            </div>
+                        </div>
+                        <p class="fr price2">￥32</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+            </ul>
+            <!--更多-->
+            <div class="more">
+                <a href="javascript:;">更多划算 逛起来</a>
+            </div>
+        </div>
+        <!--cloth-->
+        <div class="cloth clearfix">
+        	<a href="javascript:;" class="fl cloth_left"></a>
+            <ul class="cloth_list fl">
+            	<li>
+                	<a href="javascript:;" class="red">服饰</a>
+                </li>
+                <li>
+                	<a href="javascript:;">配饰</a>
+                </li>
+                <li>
+                	<a href="javascript:;">美妆</a>
+                </li>
+                <li>
+                	<a href="javascript:;">鞋包</a>
+                </li>
+                <li>
+                	<a href="javascript:;">食品</a>
+                </li>
+                <li>
+                	<a href="javascript:;" class="red">家居</a>
+                </li>
+                <li>
+                	<a href="javascript:;">运动</a>
+                </li>
+                <li>
+                	<a href="javascript:;" class="red">电器</a>
+                </li>
+                <li>
+                	<a href="javascript:;">百货</a>
+                </li>
+                <li>
+                	<a href="javascript:;">母婴</a>
+                </li>
+                <li>
+                	<a href="javascript:;">数码</a>
+                </li>
+                <li>
+                	<a href="javascript:;">更多</a>
+                </li>
+            </ul>
+        </div>
+        <div class="more">
+            <a href="javascript:;">精彩商品 逛起来</a>
+            <span class="arrow arrow2"></span>
+        </div>
+
+        <!--life-->
+        <div class="cloth clearfix">
+            <a href="javascript:;" class="fl cloth_left cloth_left2"></a>
+            <ul class="cloth_list fl">
+                <li>
+                    <a href="javascript:;" class="red">美食</a>
+                </li>
+                <li>
+                    <a href="javascript:;">教育</a>
+                </li>
+                <li>
+                    <a href="javascript:;">酒店</a>
+                </li>
+                <li>
+                    <a href="javascript:;">电影</a>
+                </li>
+                <li>
+                    <a href="javascript:;">生活服务</a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="red">卡券</a>
+                </li>
+                <li>
+                    <a href="javascript:;">摄影</a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="red">粮食生鲜</a>
+                </li>
+                <li>
+                    <a href="javascript:;">门票</a>
+                </li>
+                <li>
+                    <a href="javascript:;">休闲娱乐</a>
+                </li>
+                <li>
+                    <a href="javascript:;"></a>
+                </li>
+                <li>
+                    <a href="javascript:;"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="more">
+            <a href="javascript:;">品质生活 逛起来</a>
+            <span class="arrow arrow2"></span>
+        </div>
+        
+        <!--brank-->
+        <div class="cloth clearfix">
+            <a href="javascript:;" class="fl cloth_left cloth_left3"></a>
+            <ul class="cloth_list fl">
+                <li>
+                    <a href="javascript:;">七匹狼</a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="red">粉红女...</a>
+                </li>
+                <li>
+                    <a href="javascript:;">卓诗尼</a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="red">收纳博士</a>
+                </li>
+                <li>
+                    <a href="javascript:;">惠氏</a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="red">夏乐</a>
+                </li>
+                <li>
+                    <a href="javascript:;">帕克伦</a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="red">古今</a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="red">九牧</a>
+                </li>
+                <li>
+                    <a href="javascript:;">诺奥</a>
+                </li>
+                <li>
+                    <a href="javascript:;">红豆</a>
+                </li>
+                <li>
+                    <a href="javascript:;">曼秀雷敦</a>
+                </li>
+            </ul>
+        </div>
+        <div class="more">
+            <a href="javascript:;">品牌折扣 逛起来</a>
+            <span class="arrow arrow2"></span>
+        </div>
+        
+        <!--下载区-->
+        <ul class="download clearfix">
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;" class="an"></a></li>
+            <li><a href="javascript:;" class="idea"></a></li>
+
+        </ul>
+    </section>
+    <footer>
+        <div class="reg_box clearfix">
+            <a href="javascript:;" class="fl">登录</a>
+            <a href="javascript:;" class="reg fl">注册</a>
+            <a href="javascript:;" class="top">TOP<span></span></a>
+
+        </div>
+        <div class="information">
+            <p>
+                <a href="javascript:;">标准版</a>
+                <a href="javascript:;" class="computer">电脑版</a>
+            </p>
+            <p class="detail_text">2013 浙B2-20082004&nbsp&nbsp服务中心</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
