@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+.list-group a{
+	color:#000;
+}
+.list-group .list_style{
+	color:#fff;
+}
+.list-group a:hover{
+	text-decoration:none;
+}
+
+.page-header{
+	margin-top:0;
+}
+.page-header h3{
+	margin:0;
+	font-size:16px;
+}
+.dropdown .btn{
+	padding:0 6px;
+}
+
+form .alert{
+	margin-top:20px;
+}

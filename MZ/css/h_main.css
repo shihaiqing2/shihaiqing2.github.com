@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-family:'微软雅黑';
+}
+.progress{
+	margin-bottom:15px;
+}
+.wh64{
+	width:64px;
+	height:64px;
+	border-radius:50%;
+}
+
+.mar_t15{
+	margin-top:15px;
+}
+.taglist{
+	
+}
+.taglist .alert{
+	margin:15px 15px 15px 0px;
+}
+.pad0{
+	padding:0;
+}
+footer{
+	padding:20px 0;
+}
+footer p{
+	text-align:center;
+}

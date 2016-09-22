@@ -1,0 +1,997 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>百度传课网</title>
+<link href="style/common.css" rel="stylesheet" />
+<link href="style/main.css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/data.js"></script>
+<script src="js/share.js"></script>
+</head>
+
+<body>
+	<!--header开始-->
+	<div class="header">
+    	<div class="header_box clearfix">
+        	<h1 class="fl"><a href="javascript:;">百度传课</a></h1>
+            <ul class="fl down">
+            	<li class="down_ck">
+                	<a href="javascript:;"><i class="download"></i>下载传课</a>
+                    <div class="down_box clearfix">
+                    	<div class="fl">
+                        	<img src="img/ewm.jpg" alt="ewm" />
+                            <p>扫描下载官方APP</p>
+                        </div>
+                        <div class="fr">
+                        	<h3>更多下载：</h3>
+                            <a href="javascript:;" class="khd">官方客户端下载</a>
+                            <a href="javascript:;" class="more">更多传课产品</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="javascript:;"><i class="shopping"></i>购物车<span>(0)</span></a></li>
+            </ul>
+            <!--搜索框开始-->
+            <div class="search fl">
+            	<input type="text" />
+                <span class="place">请输入关键词、学校名等</span>
+                <span class="course">
+                	<a id="type">学校</a>
+                	
+                	<i class="below"></i>
+                	<span class="choose" id="choose">
+                     <a id="course">课程</a>
+                    </span>
+     
+                </span>
+                <a href="javascript:;" class="search_icon">
+                	<span></span>
+                </a>
+            </div>
+            <!--登录开始-->
+            <div class="login fr">
+            	<a href="javascript:;" class="login_txt">马上登录</a>
+                <a href="javascript:;">注册</a>
+            </div>
+        </div>
+    </div>
+    <!--header结束-->
+    <!--banner开始-->
+    <div class="banner">
+    	<div class="banner_box">
+        	<ul class="banner_list">
+                <li style="display:block;">
+                    <a href="javascript:;"><img src="img/banner.jpg" /></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/banner1.jpg" /></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/banner2.jpg" /></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/banner3.jpg" /></a>
+                </li>
+            </ul>
+            <ol class="num_list">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    	
+    </div>
+    <!--banner结束-->
+    <!--nav开始-->
+    <div class="nav">
+    	<div class="nav_content clearfix">
+        	<div class="menu fl">
+            	<a href="javascript:;" class="all">所有课程分类</a>
+            	<ul class="menu_list" id="menu_list">
+                	<li class="manu1">
+                    	<a href="javascript:;">编程</a>、
+                        <a href="javascript:;">设计</a>、
+                        <a href="javascript:;">IT软件</a>
+                        <span class="arr"></span>
+                        
+                    </li>
+                    <li class="manu1">
+                    	<a href="javascript:;">求职</a>、
+                        <a href="javascript:;">职场</a>、
+                        <a href="javascript:;">办公软件</a>
+                        <span class="arr"></span>
+                    </li>
+                    <li class="manu1">
+                    	<a href="javascript:;">英语</a>、
+                        <a href="javascript:;">日语</a>、
+                        <a href="javascript:;">法语</a>、
+                        <a href="javascript:;">韩语</a>
+                        <span class="arr"></span>
+                    </li>
+                    <li class="manu1">
+                    	<a href="javascript:;">营销</a>、
+                        <a href="javascript:;">理财</a>、
+                        <a href="javascript:;">专业技能</a>
+                        <span class="arr"></span>
+                    </li>
+                    <li class="manu1">
+                    	<a href="javascript:;">会计证</a>、
+                        <a href="javascript:;">钢琴</a>、
+                        <a href="javascript:;">建造师</a>、
+                        <span class="arr"></span>
+                    </li>
+                    <li class="manu1">
+                    	<a href="javascript:;">国考</a>、
+                        <a href="javascript:;">省考</a>、
+                        <a href="javascript:;">学历教育</a>
+                        <span class="arr"></span>
+                    </li>
+                    <li class="manu1">
+                    	<a href="javascript:;">高考</a>、
+                        <a href="javascript:;">中考</a>、
+                        <a href="javascript:;">小生初</a>
+                        <span class="arr"></span>
+                    </li>
+                    <li class="manu1">
+                    	<a href="javascript:;">考研</a>、
+                        <a href="javascript:;">四六级</a>、
+                        <a href="javascript:;">计算机考试</a>
+                        <span class="arr"></span>
+                    </li>
+                    <li class="manu1">
+                    	<a href="javascript:;">雅思</a>、
+                        <a href="javascript:;">托福</a>、
+                        <a href="javascript:;">留学指导</a>
+                        <span class="arr"></span>
+                    </li>
+                    <li class="manu1">
+                    	<a href="javascript:;">生活</a>、
+                        <a href="javascript:;">文化</a>、
+                        <a href="javascript:;">兴趣</a>
+                        <span class="arr"></span>
+                    </li>
+                    <li class="manu1 last">
+                    	<a href="javascript:;">学术</a>、
+                        <a href="javascript:;">TED</a>、
+                        <a href="javascript:;">名校公开课</a>
+                        <span class="arr"></span>
+                    </li>
+                	<!--隐藏的子菜单-->
+                    
+                     <div class="hide_menu clearfix">
+                    	<div class="line"></div>
+                       	<div class="hide_menu_left fl">
+                            <h3><a href="javascript:;">语言学习</a></h3>
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" class="first">英语</a>
+                                    <a href="javascript:;">英语口语</a>
+                                    <a href="javascript:;">英语入门</a>
+                                    <a href="javascript:;">职场英语</a>
+                                    <a href="javascript:;">行业英语</a>
+                                    <a href="javascript:;">职称英语</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="first">日语</a>
+                                    <a href="javascript:;">日语口语</a>
+                                    <a href="javascript:;">日语入门</a>
+                                    <a href="javascript:;">日语考试</a>
+                                    <a href="javascript:;">日语语法</a>
+                                    <a href="javascript:;">日语词汇</a>
+                                    <a href="javascript:;">新标日</a>
+                                    <a href="javascript:;">大家的日语</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="first">韩语</a>
+                                    <a href="javascript:;">韩语入门</a>
+                                    <a href="javascript:;">韩语口语</a>
+                                    <a href="javascript:;">韩语语法</a>
+                                    <a href="javascript:;">韩语词汇</a>
+                                    <a href="javascript:;">韩语考试</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="first">法语</a>
+                                    <a href="javascript:;">法语入门</a>
+                                    <a href="javascript:;">法语考试</a>
+                                    <a href="javascript:;">法语词汇</a>
+                                    <a href="javascript:;">法语口语</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="first">小语种</a>
+                                    <a href="javascript:;">德语</a>
+                                    <a href="javascript:;">粤语</a>
+                                    <a href="javascript:;">西班牙语</a>
+                                    <a href="javascript:;">汉语</a>
+                                    <a href="javascript:;">其他</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="introduce fr">
+                        	<div class="introduce_top">
+                            	<h3>推荐课程</h3>
+                                <ul>
+                                	<li><a href="javascript:;">英语单词解密 科学记忆</a></li>
+                                    <li><a href="javascript:;">日语五十音图入门精讲版</a></li>
+                                    <li><a href="javascript:;">德语日常用语一次搞定</a></li>
+                                    <li><a href="javascript:;">粤语香港话广东话学习 </a></li>
+                                </ul>
+                                <a href="javascript:;" class="ad_img1"><img src="img/m1.jpg" /></a>
+                                <a href="javascript:;" class="ad_img2"><img src="img/m2.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </ul>
+            </div>
+            <ul class="nav_list fl">
+            	<li>
+                	<a href="javascript:;" class="current">首页</a>
+                </li>
+                <li>
+                	<a href="javascript:;">IT精英</a>
+                </li>
+                <li>
+                	<a href="javascript:;">考试达人</a>
+                </li>
+                <li>
+                	<a href="javascript:;">人在职场</a>
+                </li>
+                <li>
+                	<a href="javascript:;">中小学</a>
+                </li>
+                <li>
+                	<a href="javascript:;">今日直播</a>
+                </li>
+                <li>
+                	<a href="javascript:;">精品课</a>
+                </li>
+                <li class="baidu">
+                	<a href="javascript:;">百度留学</a>
+                    <i class="hot"></i>
+                </li>
+            </ul>
+            <div class="built fr"><a href="javascript:;">创建学校</a></div>
+        </div>
+    </div>
+    <!--nav结束-->
+    <div class="wrap">
+    	<!--发现-->
+    	<div class="find clearfix">
+        	<div class="fl ad1">
+            	<div class="fl">
+                	<a href="javascript:;"><img src="img/01.jpg" /></a>
+                </div>
+                <div class="left">
+                	<a href="javascript:;"><img src="img/02.jpg" /></a>
+                </div>
+                <div class="fl d3">
+                	<a href="javascript:;"><img src="img/03.png" /></a>
+                </div>
+                <div class="left">
+                	<a href="javascript:;"><img src="img/04.jpg" /></a>
+                </div>
+            </div>
+        	<div class="fr find_box">
+            	<div class="find_top">
+                	<h3>发现</h3>
+                </div>
+            	<ul class="find_bottom">
+                	<li class="clearfix">
+                    	<a href="javascript:;" class="fl find_img">
+                        	<img src="img/f_1.jpg" alt="t1" />
+                        </a>
+                        <div class="fl find_text">
+                        	<h3><a href="javascript:;" class="orange">百度校园-相约好课</a></h3>
+                            <p>最前沿的技术解密，最清晰的人才职业导航。</p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                    	<a href="javascript:;" class="fl find_img">
+                        	<img src="img/f_2.jpg" alt="t1" />
+                        </a>
+                        <div class="fl find_text">
+                        	<h3><a href="javascript:;">Web前端开发</a></h3>
+                            <p>达内教育独家HTML5课程体系，直通前端工程师</p>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                    	<a href="javascript:;" class="fl find_img">
+                        	<img src="img/f_3.jpg" alt="t1" />
+                        </a>
+                        <div class="fl find_text">
+                        	<h3><a href="javascript:;">周周相约 趴趴精彩</a></h3>
+                            <p>精心打造周末充电趴，蜕变从利用好每个周末开始，我们已备好，约么？</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="content clearfix">
+        	<div class="main fl">
+            	<!--精品课程-->
+                <div class="main1">
+                	<div class="main1_top clearfix">
+                    	<h3 class="fl">精品课程</h3>
+                        <ul class="fl course_list1">
+                        	<li>
+                            	<a href="javascript:;">编程语言</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">工具软件</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">外语学习</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">职业资格</a>
+                            </li>
+                           
+                        </ul>
+                        <a class="more fr" href="javascript:;">更多</a>
+                    </div>
+                    <ul class="main1_bottom clearfix" id="c1">
+                    </ul>
+                </div>
+                <!--精品课程结束-->
+                
+                <!--免费好课-->
+                <div class="main1 main2">
+                	<div class="main1_top clearfix">
+                    	<h3 class="fl">免费好课</h3>
+                        <a class="more fr" href="javascript:;">更多</a>
+                    </div>
+                    <ul class="main1_bottom clearfix">
+                    	<li>
+                        	<a href="javascript:;" class="course_img"><img src="img/p1.jpg" /></a>
+                            <p><a href="javascript:;">工间办公室瑜伽 </a></p>
+                        </li>
+                        <li>
+                        	<a href="javascript:;" class="course_img"><img src="img/p2.jpg" /></a>
+                            <p><a href="javascript:;">2017考研新大纲解析课 </a></p>
+                        </li>
+                        <li>
+                        	<a href="javascript:;" class="course_img"><img src="img/p17.jpg" /></a>
+                            <p><a href="javascript:;">怎样才能学好平面设计</a></p>
+                        </li>
+                        <li class="last">
+                        	<a href="javascript:;" class="course_img"><img src="img/p18.jpg" /></a>
+                            <p><a href="javascript:;">SEO工作原理和优化基础</a></p>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <!--免费课程结束-->
+                <!--IT/互联网/技能-->
+                <div class="main1 main3">
+                	<div class="main1_top clearfix">
+                    	<h3 class="fl">IT/互联网/技能</h3>
+                        <ul class="fl course_list1">
+                        	<li>
+                            	<a href="javascript:;">编程</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">设计</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">移动开发</a>
+                            </li>
+                        </ul>
+                        <a class="more fr" href="javascript:;">更多</a>
+                    </div>
+                    <ul class="main1_bottom clearfix">
+                    	<li class="fl li1">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p5.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">iOS开发玩转界面-UIKit </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>15</i>课时</span>
+                                    <span class="num"><i>345</i>人在学</span>
+                                </div>
+                                <span class="price free">免费</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li2">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p6.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">安卓开发工程师课程 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>15</i>课时</span>
+                                    <span class="num"><i>345</i>人在学</span>
+                                </div>
+                                <span class="price free">免费</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li3">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p7.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">AutoCAD2017经典100例教程 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>15</i>课时</span>
+                                    <span class="num"><i>345</i>人在学</span>
+                                </div>
+                                <span class="price">￥50</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li4">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p8.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">PS淘宝美工零基础 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>17</i>课时</span>
+                                    <span class="num"><i>348</i>人在学</span>
+                                </div>
+                                <span class="price free">免费</span>
+                            </div>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!--IT/互联网/技能结束-->
+                
+                <!--职场/理财/外语开始-->
+                <div class="main1 main3">
+                	<div class="main1_top clearfix">
+                    	<h3 class="fl">职场/理财/外语</h3>
+                        <ul class="fl course_list1">
+                        	<li>
+                            	<a href="javascript:;">办公软件</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">求职面试</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">外语技能</a>
+                            </li>
+                        </ul>
+                        <a class="more fr" href="javascript:;">更多</a>
+                    </div>
+                    <ul class="main1_bottom clearfix">
+                    	<li class="fl li1">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p9.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">求职一分钟自我介绍通关术 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>1</i>课时</span>
+                                    <span class="num"><i>15</i>人在学</span>
+                                </div>
+                                <span class="price">￥15</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li2">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p10.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">Excel快捷键教学 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>15</i>课时</span>
+                                    <span class="num"><i>4521</i>人在学</span>
+                                </div>
+                                <span class="price free">免费</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li3">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p11.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">看韩剧学韩语 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>15</i>课时</span>
+                                    <span class="num"><i>345</i>人在学</span>
+                                </div>
+                                <span class="price free">免费</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li4">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p12.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">2017银行校招五大行网申 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>12</i>课时</span>
+                                    <span class="num"><i>38</i>人在学</span>
+                                </div>
+                                <span class="price free">免费</span>
+                            </div>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!--职场/理财/外语结束-->
+                
+                <!--考试/考级/考证开始-->
+                <div class="main1 main3">
+                	<div class="main1_top clearfix">
+                    	<h3 class="fl">考试/考级/考证</h3>
+                        <ul class="fl course_list1">
+                        	<li>
+                            	<a href="javascript:;">财会金融</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">英语入门</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">热门考试</a>
+                            </li>
+                        </ul>
+                        <a class="more fr" href="javascript:;">更多</a>
+                    </div>
+                    <ul class="main1_bottom clearfix">
+                    	<li class="fl li1">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p13.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">公共营养师-基础知识  </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>80</i>课时</span>
+                                    <span class="num"><i>152</i>人在学</span>
+                                </div>
+                                <span class="price">￥1.1</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li2">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p14.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">12天迅速突破雅思听说读写 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>12</i>课时</span>
+                                    <span class="num"><i>2046</i>人在学</span>
+                                </div>
+                                <span class="price free">免费</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li3">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p15.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">计算机二级热门课程内容揭秘 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>38</i>课时</span>
+                                    <span class="num"><i>3415</i>人在学</span>
+                                </div>
+                                <span class="price">￥50</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li4">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p16.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">2016会从-财经法规 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>22</i>课时</span>
+                                    <span class="num"><i>1892</i>人在学</span>
+                                </div>
+                                <span class="price free">免费</span>
+                            </div>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!--考试/考级/考证结束-->
+                
+                <!--生活/文化/兴趣开始-->
+                <div class="main1 main3">
+                	<div class="main1_top clearfix">
+                    	<h3 class="fl">生活/文化/兴趣</h3>
+                        <ul class="fl course_list1">
+                        	<li>
+                            	<a href="javascript:;">摄影</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">星座</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">生活技巧</a>
+                            </li>
+                        </ul>
+                        <a class="more fr" href="javascript:;">更多</a>
+                    </div>
+                    <ul class="main1_bottom clearfix">
+                    	<li class="fl li1">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p19.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">零基础学习服装搭配 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>10</i>课时</span>
+                                    <span class="num"><i>13248</i>人在学</span>
+                                </div>
+                                <span class="price free">免费</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li2">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p20.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">手绘卡通人物 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>30</i>课时</span>
+                                    <span class="num"><i>2746</i>人在学</span>
+                                </div>
+                                <span class="price free">免费</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li3">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p21.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">魔发秀 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>38</i>课时</span>
+                                    <span class="num"><i>3415</i>人在学</span>
+                                </div>
+                                <span class="price">￥50</span>
+                            </div>
+                            
+                        </li>
+                        <li class="fl li4">
+                        	<a href="javascript:;" class="course_img2 fl"><img src="img/p22.jpg" /></a>	
+                            <div class="fl detail2">
+                            	<p><a href="javascript:;">摄影课程大全 </a></p>
+                                <div class="detail clearfix">
+                                    <span class="num time"><i>8</i>课时</span>
+                                    <span class="num"><i>22105</i>人在学</span>
+                                </div>
+                                <span class="price free">免费</span>
+                            </div>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!--生活/文化/兴趣开始-->
+            </div>
+            <!--左侧结束-->
+        	<div class="content_right fr">
+            	<div class="first_ad">
+                	<a href="javascript::"><img src="img/ad1.jpg" alt="ad" /></a>
+                </div>
+                <!--最近直播课开始-->
+                <div class="live">
+                	<div class="live_top clearfix">
+                    	<h3 class="fl">直播间</h3>
+                        <a href="javascript:;" class="fr">更多</a>
+                    </div>
+                    <div class="live_bottom">
+                    	<div class="live_box">
+                        	<ul class="living">
+                                <li class="live_icon">直播中</li>
+                                <li class="clearfix">
+                                    <span class="fl"> 09:30</span>
+                                    <a href="javascript:;" class="fl">【直播】日语零基础入门 — 日语语法直</a>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="fl"> 10:30</span>
+                                    <a href="javascript:;" class="fl">新标日vip小班直播课6月班（2016）</a>
+                                </li>
+    
+    							<li class="clearfix">
+                                    <span class="fl"> 10:30</span>
+                                    <a href="javascript:;" class="fl">PS技能特效精通班</a>
+                                </li>
+    
+                            </ul>
+                            <ul class="living">
+                            	<li class="live_icon today_icon">今天</li>
+                                <li class="clearfix">
+                                    <span class="fl"> 11:00</span>
+                                    <a href="javascript:;" class="fl">30小时通过全国计算机二级C语言考试真题班</a>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="fl"> 14:30</span>
+                                    <a href="javascript:;" class="fl">Auto CAD基础课</a>
+                                </li>
+    
+    							<li class="clearfix">
+                                    <span class="fl"> 14:30</span>
+                                    <a href="javascript:;" class="fl">Alisa同学 剑桥国际英语1册</a>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="fl"> 15:00</span>
+                                    <a href="javascript:;" class="fl">计算机二级vfp培训国二培训《考试原题班》</a>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="fl"> 16:30</span>
+                                    <a href="javascript:;" class="fl">小升初英语口语培训</a>
+                                </li>
+    
+    							<li class="clearfix">
+                                    <span class="fl"> 17:00</span>
+                                    <a href="javascript:;" class="fl">计算机二级access考试培训（真题篇）</a>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="fl"> 17:30</span>
+                                    <a href="javascript:;" class="fl">高一数学 必修1</a>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="fl"> 18:00</span>
+                                    <a href="javascript:;" class="fl">小学四年级——数学思维训练</a>
+                                </li>
+    
+    							<li class="clearfix">
+                                    <span class="fl"> 18:00</span>
+                                    <a href="javascript:;" class="fl">高一化学 必修1</a>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="fl"> 18:30</span>
+                                    <a href="javascript:;" class="fl">高考物理高频考点之高一物理必修一热点解读</a>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="fl"> 19:00</span>
+                                    <a href="javascript:;" class="fl">新标日vip小班直播课6月班（2016）</a>
+                                </li>
+    
+    							<li class="clearfix">
+                                    <span class="fl"> 19:30</span>
+                                    <a href="javascript:;" class="fl">鲁教版七年级英语上册</a>
+                                </li>
+                                </li>
+    
+    							<li class="clearfix last1">
+                                    <span class="fl"> 19:30</span>
+                                    <a href="javascript:;" class="fl">章老师带你游遍韩国</a>
+                                </li>
+                            </ul>
+                        </div>
+                    	
+                    </div>
+                </div>
+            	<!--最近直播课结束-->
+                <!--学校排行开始-->
+                <div class="rank">
+                	<ul class="rank_top clearfix">
+                    	<li class="active">热门学校</li>
+                        <li>学校排行</li>
+                    </ul>
+                    <div class="rank_bottom">
+                    	<ul>
+                        	<li class="clearfix">
+                            	<a href="javascript:;" class="fl img_box"><img src="img/s1.jpg" /></a>
+                                <p class="fl text_box"><a href="javascript:;">文鼎电脑学校</a></p>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="javascript:;" class="fl img_box"><img src="img/s2.jpg" /></a>
+                                <p class="fl text_box"><a href="javascript:;">互联网技术就业速成班</a></p>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="javascript:;" class="fl img_box"><img src="img/s3.jpg" /></a>
+                                <p class="fl text_box"><a href="javascript:;">宅客学院</a></p>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="javascript:;" class="fl img_box"><img src="img/s4.jpg" /></a>
+                                <p class="fl text_box"><a href="javascript:;">对啊网百度旗舰店</a></p>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="javascript:;" class="fl img_box"><img src="img/s5.jpg" /></a>
+                                <p class="fl text_box"><a href="javascript:;">进步商学院</a></p>
+                            </li>
+                        </ul>
+                        <ul style="display:none;">
+                        	<li class="clearfix">
+                            	<a href="javascript:;" class="fl img_box"><img src="img/s6.jpg" /></a>
+                                <p class="fl text_box"><a href="javascript:;">互联网技术学校速成班</a></p>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="javascript:;" class="fl img_box"><img src="img/s2.jpg" /></a>
+                                <p class="fl text_box"><a href="javascript:;">文鼎电脑学校</a></p>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="javascript:;" class="fl img_box"><img src="img/s3.jpg" /></a>
+                                <p class="fl text_box"><a href="javascript:;">宅客学院</a></p>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="javascript:;" class="fl img_box"><img src="img/s4.jpg" /></a>
+                                <p class="fl text_box"><a href="javascript:;">文都教育</a></p>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="javascript:;" class="fl img_box"><img src="img/s16.jpg" /></a>
+                                <p class="fl text_box"><a href="javascript:;">多学多用</a></p>
+                            </li>
+                        </ul>
+                        <p class="find_more"><a href="javascript:;">查看更多学校排名>></a></p>
+                    </div>
+                </div>
+                <!--学校排行结束-->
+                <!--最新合作伙伴开始-->
+                <div class="live company">
+                	<div class="live_top clearfix">
+                    	<h3 class="fl">最新合作伙伴</h3>
+                        <a href="javascript:;" class="fr">更多</a>
+                    </div>
+                    <ul class="company_bottom clearfix">
+                    	<li>
+                        	<a href="javascript:;" class="img_box2"><img src="img/s7.jpg" /></a>
+                            <p><a href="javascript:;">海贝教育</a></p>
+                        </li>
+                        <li>
+                        	<a href="javascript:;" class="img_box2"><img src="img/s8.jpg" /></a>
+                            <p><a href="javascript:;">宅课学院</a></p>
+                        </li>
+                        <li>
+                        	<a href="javascript:;" class="img_box2"><img src="img/s9.jpg" /></a>
+                            <p><a href="javascript:;">Techer L</a></p>
+                        </li>
+                        <li class="spe1">
+                        	<a href="javascript:;" class="img_box2"><img src="img/s10.jpg" /></a>
+                            <p><a href="javascript:;">全民网校</a></p>
+                        </li>
+                        <li class="spe1">
+                        	<a href="javascript:;" class="img_box2"><img src="img/s11.jpg" /></a>
+                            <p><a href="javascript:;">认证之友</a></p>
+                        </li>
+                        <li class="spe1">
+                        	<a href="javascript:;" class="img_box2"><img src="img/s17.jpg" /></a>
+                            <p><a href="javascript:;">达内精品在线</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <!--最新合作伙伴结束-->
+                <!--明星讲师开始-->
+                <div class="live star company">
+                	<div class="live_top clearfix">
+                    	<h3>明星讲师</h3>
+                    </div>
+                    <ul class="rank_bottom">
+                        <li class="clearfix">
+                            <a href="javascript:;" class="fl img_box"><img src="img/t1.jpg" /></a>
+                            <h3 class="fl text_box"><a href="javascript:;">宅课学院-闫赫</a></p>
+                            <p>拥有近10年软件开发和培训管理经验</p>
+                        </li>
+                        <li class="clearfix">
+                            <a href="javascript:;" class="fl img_box"><img src="img/t2.jpg" /></a>
+                            <h3 class="fl text_box"><a href="javascript:;">Techer L </a></p>
+                            <p>钢琴教育家；声乐表演、心理学硕士</p>
+                        </li>
+                        <li class="clearfix">
+                            <a href="javascript:;" class="fl img_box"><img src="img/t3.jpg" /></a>
+                            <h3 class="fl text_box"><a href="javascript:;">上元在线-海川老师 </a></p>
+                            <p>上元教育集团产品总监，教育技术硕士</p>
+                        </li>
+                        <li class="clearfix">
+                            <a href="javascript:;" class="fl img_box"><img src="img/t4.jpg" /></a>
+                            <h3 class="fl text_box"><a href="javascript:;">乐学医考-中医田磊博士 </a></p>
+                            <p>乐学医考教学总监，医考培训顶级名师！
+</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--明星讲师结束-->
+            </div>
+            <!--右侧结束-->
+        </div>
+        
+        <!--最受关注的学校开始-->
+        <div class="focus">
+        	<div class="focus_top">
+                <h3>最受关注的学校</h3>
+            </div>
+            <ul class="focus_list clearfix">
+            	<li class="first">
+                	<a href="javascript:;" class="img_box4"><img src="img/s18.jpg" alt="英盛网" /></a>
+                    <p><a href="javascript:;">英盛网</a></p>
+                </li>
+                <li>
+                	<a href="javascript:;" class="img_box4"><img src="img/s19.jpg" alt="英盛网" /></a>
+                    <p><a href="javascript:;">达梦教育</a></p>
+                </li>
+                <li>
+                	<a href="javascript:;" class="img_box4"><img src="img/s20.jpg" alt="达内精品在线" /></a>
+                    <p><a href="javascript:;">中大网校</a></p>
+                </li>
+                <li>
+                	<a href="javascript:;" class="img_box4"><img src="img/s21.jpg" alt="达梦教育" /></a>
+                    <p><a href="javascript:;">文都网校</a></p>
+                </li>
+                <li>
+                	<a href="javascript:;" class="img_box4"><img src="img/s22.jpg" alt="中大网校" /></a>
+                    <p><a href="javascript:;">我赢职场</a></p>
+                </li>
+                <li>
+                	<a href="javascript:;" class="img_box4"><img src="img/s23.jpg" alt="文都网校" /></a>
+                    <p><a href="javascript:;">ACE英语网校</a></p>
+                </li>
+                <li>
+                	<a href="javascript:;" class="img_box4"><img src="img/s14.jpg" alt="我赢职场" /></a>
+                    <p><a href="javascript:;">我赢职场</a></p>
+                </li>
+                <li>
+                	<a href="javascript:;" class="img_box4"><img src="img/s15.jpg" alt="金晟教育" /></a>
+                    <p><a href="javascript:;">金晟教育</a></p>
+                </li>
+                <li class="last">
+                	<a href="javascript:;" class="img_box4"><img src="img/s24.jpg" /></a>
+                    <p><a href="javascript:;">上元在线</a></p>
+                </li>
+            </ul>
+        </div>
+        <!--最受关注的学校结束-->
+        <!--关于我们等开始-->
+        <div class="information clearfix">
+        	<dl>
+            	<dt>知心帮助</dt>
+                <dd><a href="javascript:;">新手指南</a></dd>
+                <dd><a href="javascript:;">我要听课</a></dd>
+                <dd><a href="javascript:;">我要讲课</a></dd>
+                <dd><a href="javascript:;">我要开学校</a></dd>
+            </dl>
+            <dl>
+            	<dt class="study">学习神奇</dt>
+                <dd><a href="javascript:;">百度传课KK</a></dd>
+                <dd><a href="javascript:;">百度传课ipad版</a></dd>
+                <dd><a href="javascript:;">百度传课iphone版</a></dd>
+                <dd><a href="javascript:;">百度传课Android版</a></dd>
+            </dl>
+            <dl>
+            	<dt class="focus_us">关注我们</dt>
+                <dd><a href="javascript:;">百度贴吧</a></dd>
+                <dd><a href="javascript:;">新浪微博</a></dd>
+                <dd><a href="javascript:;">QQ空间</a></dd>
+                <dd><a href="javascript:;">官方微信</a></dd>
+            </dl>
+            <dl class="last">
+            	<dt class="mail">客服邮箱</dt>
+                <dd>chuanke-service@baidu.com</dd>
+                <dd>在线客服：<a href="javascript:;" class="kf"></a></dd>
+                <dd>工作时间：周一至周五10:00-18:00</dd>
+                <dd>法定节假日除外</dd>
+            </dl>
+        </div>
+    </div>
+    <!--footer开始-->
+    <div class="footer">
+    	<div class="footer_list">
+        	<span>友情链接</span>
+            <a href="javascript:;">友情链接</a>
+            <a href="javascript:;">中华人民共和国教育部</a>
+            <a href="javascript:;">北京市教委</a>
+            <a href="javascript:;">美国留学</a>
+            <a href="javascript:;">知好乐网校</a>
+            <a href="javascript:;">在线英语培训</a>
+            <a href="javascript:;">公务员考试网</a>
+            <a href="javascript:;">坦途教育网</a>
+            <a href="javascript:;">博浪网</a>
+            <a href="javascript:;">智康1对1</a>
+            <a href="javascript:;">学习方法网</a>
+            <a href="javascript:;">在线考试中心</a>
+            <a href="javascript:;">时代学习网</a>
+             <a href="javascript:;">网络教育平台</a>
+            <a href="javascript:;">尚友网</a>
+            <a href="javascript:;">高顿网校</a>
+            <a href="javascript:;">爱家市场</a>
+            <a href="javascript:;">Picoman微投</a>
+            <a href="javascript:;">智能电视软件</a>
+            <a href="javascript:;">大耳朵英语</a>
+            <a href="javascript:;">考试界</a>
+            <a href="javascript:;">中大网校</a>
+            <a href="javascript:;">尚学堂</a>
+            <a href="javascript:;">朗播英语</a>
+            <a href="javascript:;">文都网校</a>
+             <a href="javascript:;">好好学习</a>
+            <a href="javascript:;">达内教育</a>
+            <a href="javascript:;">芥末留学网</a>
+        </div>
+        <div class="footer_list2">
+        	<a href="javascript:;">关于百度传课</a>
+            <a href="javascript:;">关于百度传课</a>
+            <a href="javascript:;">关于百度传课</a>
+            <a href="javascript:;">关于百度传课</a>
+            <a href="javascript:;">关于百度传课</a>
+            <a href="javascript:;">关于百度传课</a>
+        </div>
+        <div class="footer_list3">
+        	<span>京ICP证<a href="javascript:;">130265号</a></span>
+            <span>Copyright © 2015 <a href="javascript:;">使用百度前必读</a></span>
+            <span>百度传课<a href="javascript:;"> Chuanke.com</a></span>
+        </div>
+    </div>
+</body>
+</html>

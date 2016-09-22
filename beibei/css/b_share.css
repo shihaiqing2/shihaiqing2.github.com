@@ -1,0 +1,254 @@
+@charset "utf-8";
+/* CSS Document */
+img{
+	width:100%;
+	height:100%;
+}
+body{
+	background:#f2f4f7;
+	font-size:.6rem;
+}
+/*header*/
+header{
+	position:relative;
+	height:1.7rem;
+	top:0;
+	left:0;
+	overflow:hidden;
+	width:100%;
+	z-index:1;
+	background:#fff;
+}
+.nav_wrap{
+	width:14rem;
+	margin-left:0.6rem;
+	overflow:hidden;
+}
+.nav{
+	width:997px;
+}
+.nav li{
+	float:left;
+	font-size:.6rem;
+	line-height:1.728rem;
+}
+.nav li a{
+	color:#a4a4a4;
+	padding:0 .4rem;
+}
+.nav li.active{
+	border-bottom:.1rem solid #ff4965;
+	line-height:1.6rem;
+	margin-top:0.04rem;
+}
+.nav li.active a{
+	color:#ff4965;
+}
+.search{
+	width:1.728rem;
+	height:1.728rem;
+	position:absolute;
+	right:0;
+	top:0;
+	color:#999;
+	font-size:0.85rem;
+	text-align:center;
+	line-height:1.728rem;
+	background:#fff;
+	cursor:pointer;
+}
+
+/*banner*/
+.banner_box{
+	width:16rem;
+	height:6.4rem;
+	position:relative;
+}
+.banner{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.banner a{
+	display:block;
+	width:16rem;
+	height:6.4rem;
+}
+.btn{
+	position:absolute;
+	left:50%;
+	margin-left:-1.8rem;
+	bottom:.3rem;
+	
+}
+/*改变按钮颜色*/
+div .swiper-pagination-bullet-active{
+	background:#ff4965;
+}
+
+/*分类*/
+.menu{
+	padding:0.4rem 0;
+	background:#fff;
+}
+.menu a{
+	float:left;
+	width:20%;
+	text-align:center;
+}
+.menu p{
+	margin-top:0.25rem;
+	color:#3d3d3d;
+	font-size:0.6rem;
+}
+/*秒杀区*/
+.ad_box{
+	width:16rem;
+	height:8.7rem;
+	margin-top:0.4rem;
+}
+.ad_box .item1{
+	float:left;
+	width:6.85rem;
+	height:100%;
+}
+.ad_box .item2{
+	float:left;
+	width:4.55rem;
+	height:4.35rem;
+	border-left:1px solid #f8f8f8;
+	border-bottom:1px solid #f8f8f8;
+	box-sizing:border-box;
+}
+
+.ad_box .item3{
+	height:4.35rem;
+	border-bottom:none;
+}
+
+
+/*专区*/
+.ad2_box{
+	margin-top:.4rem;
+	overflow:hidden;
+}
+.ad2_list{
+	width:17.6rem;
+}
+.ad2_list a{
+	float:left;
+	width:4.4rem;
+	height:4.65rem;
+}
+
+/*特卖*/
+.hot_sale{
+	
+}
+.hot_sale h3{
+	height:1.7rem;
+	line-height:1.7rem;
+	color:#979797;
+	font-size:.7rem;
+	text-align:center;
+	background:#fff;
+}
+.hot_sale span{
+	font-size:.6rem;
+	margin-left:.2rem;
+}
+.sale_list li{
+	margin-bottom:.4rem;
+	background:#fff;
+}
+.sale_list .content{
+	display:block;
+	width:16rem;
+	height:7rem;
+	position:relative;
+}
+.text{
+	position:absolute;
+	width:100%;
+	left:0;
+	bottom:0;
+	height:.8rem;
+	background:rgba(255,255,255,.8);
+	color:#595752;
+}
+.text i{
+	width:.6rem;
+	height:.6rem;
+	display:inline-block;
+	background:url(../img/img_mj_icon.png) no-repeat;
+	background-size:cover;
+	margin-left:.5rem;
+	vertical-align:-0.05rem;
+}
+.detail{
+	padding:0 0.5rem;
+	display:block;
+	height:1.7rem;
+	line-height:1.7rem;
+	font-family:'宋体';
+}
+.detail span{
+	color:#ff8597;
+	font-weight:600;
+}
+.detail .text_gray,.detail i,.detail em{
+	color:#7f7f7f;
+	font-weight:normal;
+	font-size:.6rem;
+	font-family:'宋体';
+}
+.detail em{
+	margin-right:.2rem;
+}
+/*footer*/
+.main_nav{
+	border-top:1px solid #fafafa;
+	width:16rem;
+	height:1.85rem;
+	position:fixed;
+	left:0;
+	bottom:0;
+	background:#fff;
+	padding:0.1rem 0;
+	z-index:99;
+}
+.main_nav{
+	text-align:center;
+}
+.main_nav a{
+	display:block;
+	width:25%;
+}
+.main_nav i{
+	font-size:1rem;
+	height:1rem;
+}
+.main_nav p{
+	margin-top:-0.1rem;
+	font-size:.6rem;
+}
+.main_nav a{
+	color:#b8b8b8;
+	float:left;
+}
+.main_nav .active{
+	color:#ff4965;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
